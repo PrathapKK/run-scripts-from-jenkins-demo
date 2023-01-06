@@ -22,6 +22,8 @@ pipeline {
         stage('Relative path') {
             steps {
                 sh("./scripts/fibonacci.sh ${env.NUMBER}")
+                sh("ls -lrt ./scripts/*.sh")
+
             }
         }
         stage('Full path') {
